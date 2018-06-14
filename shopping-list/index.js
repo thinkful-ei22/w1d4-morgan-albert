@@ -23,4 +23,26 @@ const addItem = function() {
 };
 
 $(addItem);
-console.log('HI');
+
+
+const checkedItems = function () {
+$('.shopping-list').on('click', '.shopping-item-toggle', function(event){
+  $(event.currentTarget).parents('li').children('span').toggleClass('shopping-item__checked')
+  })
+}
+$(checkedItems)
+
+
+const removeItems = function (){
+  $('.shopping-list').on('click', '.shopping-item-delete', function(event){
+    $(event.currentTarget).parents('li').remove();
+    })
+  }
+
+$(removeItems)
+
+
+
+
+// check and uncheck items on the list by clicking the "Check" button
+// permanently remove items from the list
