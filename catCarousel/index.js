@@ -2,7 +2,8 @@
 
 const main = function (){
   $('a').click(event => {
-    $('.hero img').attr('src', $(event.currentTarget).children('img').attr('src'));
+    const  thumbCat = $(event.currentTarget).children('img').attr('src');
+    $('.hero img').attr('src', thumbCat);
   });
 };
 
